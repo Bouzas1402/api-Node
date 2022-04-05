@@ -1,5 +1,4 @@
 const { Schema, model } = require("mongoose");
-const { modelName } = require("./usuario");
 
 const RoleSchema = Schema({
   rol: {
