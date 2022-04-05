@@ -1,6 +1,5 @@
 const bcryptjs = require("bcryptjs");
 const { response } = require("express");
-const { ResultWithContext } = require("express-validator/src/chain");
 
 const Usuario = require("../models/usuario");
 
@@ -55,7 +54,6 @@ const usuariosPatch = (req, res = response) => {
 
 const usuariosDelete = async (req, res = response) => {
   const { id } = req.params;
-
   const usuario = await Usuario.findByIdAndUpdate(id, { estado: false });
   res.json({
     usuario,
